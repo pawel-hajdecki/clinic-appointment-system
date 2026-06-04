@@ -21,3 +21,4 @@ jobs:
       with:
         php_version: '8.2'
         args: tests
+        bootstrap: vendor/autoload.php
