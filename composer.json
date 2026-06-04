@@ -1,0 +1,20 @@
+{
+    "name": "maja-pytowska/clinic-appointment-system",
+    "autoload": {
+        "psr-4": {
+            "MajaPytowska\\ClinicAppointmentSystem\\": "app/"
+        },
+        "classmap": [
+            "core/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Maja Pytowska",
+            "email": "mpyt@pixel-tech.pl"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}

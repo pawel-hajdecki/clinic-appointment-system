@@ -123,7 +123,7 @@ class RegistrationCtrl{
 				}
 			}
 		} catch (\PDOException $e){
-			Utils::addErrorMessage("Wystąpił błąd podczas sprawdzania unikalności użytkownika." . $e->getMessage());
+			Utils::addErrorMessage("Wystąpił błąd podczas sprawdzania unikalności użytkownika.");
 		}
 
         return ! App::getMessages()->isError();

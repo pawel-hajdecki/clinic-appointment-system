@@ -2,11 +2,6 @@
 
 namespace core;
 use DateTime;
-/**
- * Wrapper class for basic utility functions
- *
- * @author Przemysław Kudłacik
- */
 class Utils {
 
     public static function addRoute($action, $controller, $roles = null) {
