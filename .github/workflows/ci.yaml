@@ -22,6 +22,7 @@ jobs:
         args: tests
         bootstrap: vendor/autoload.php
   deployment:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Deployment on Azure VM
