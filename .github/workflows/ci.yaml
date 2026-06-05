@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-
     - uses: php-actions/composer@v6
       with:
         php_version: '8.2'
@@ -22,3 +21,20 @@ jobs:
         php_version: '8.2'
         args: tests
         bootstrap: vendor/autoload.php
+  test_connection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wykonanie testowego połączenia z maszyną Azure
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.AZURE_HOST }}
+          username: ${{ secrets.AZURE_USER }}
+          key: ${{ secrets.AZURE_SSH_KEY }}
+          script: |
+            echo "=========================================="
+            echo "Połączenie SSH zostało nawiązane pomyślnie!"
+            echo "Zalogowano jako użytkownik:"
+            whoami
+            echo "Nazwa hosta maszyny:"
+            hostname
+            echo "=========================================="
