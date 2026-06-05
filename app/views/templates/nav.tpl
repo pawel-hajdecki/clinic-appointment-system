@@ -4,7 +4,7 @@
             <a href="#menu" class="menuToggle"><span>Menu</span></a>
             <div id="menu">
                 <ul>
-                    <li><a href="{url action='showMainPage'}">Strona główna</a></li>
+                    <li><a href="{url action='showMainPage'}">Strona główna git test V2</a></li>
                     {if \core\RoleUtils::inRole("admin")}
                         <li><a href="{url action='showReceptionistsMan'}">Recepcjoniści</a></li>
                         <li><a href="{url action='showPatientsMan'}">Pacjenci</a></li>
