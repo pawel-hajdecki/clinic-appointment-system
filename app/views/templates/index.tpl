@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Git pull test V1</a></h1>
+						<h1><a href="index.html">Przychodnia</a></h1>
 						{include file="nav.tpl"}
 					</header>
 

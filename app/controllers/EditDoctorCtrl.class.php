@@ -184,7 +184,7 @@ class EditDoctorCtrl{
         App::getSmarty()->assign('doctor', $this->doctorForm);
         App::getSmarty()->assign('doctorId', $this->doctorId);
         // load all specializations for the multi-select
-        $allSpecs = App::getDB()->select('specialization', ['idspecialization(id)', 'namespecialization(name)'], ['ORDER' => ['namespecialization' => 'ASC']]);
+        $allSpecs = App::getDB()->select('specialization', ['id_specialization(id)', 'name_specialization(name)'], ['ORDER' => ['name_specialization' => 'ASC']]);
         App::getSmarty()->assign('allSpecializations', $allSpecs);
         App::getSmarty()->assign('page_title','Edycja lekarza');
         App::getSmarty()->assign('page_description','Edycja danych lekarza');
