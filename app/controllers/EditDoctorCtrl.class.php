@@ -142,7 +142,7 @@ class EditDoctorCtrl{
             $newId = App::getDB()->id();
             if($newId){
                 App::getDB()->insert('role_user', [
-                    'idrole' => 5, // doctor
+                    'id_role' => 5, // doctor
                     'id_user' => $newId
                 ]);
                 App::getDB()->insert('doctor_info', [
