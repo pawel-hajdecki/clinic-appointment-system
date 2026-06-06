@@ -53,7 +53,7 @@ class EditDoctorCtrl{
         $db_doctor = App::getDB()->get('system_user', [
             '[>]doctor_info' => ['id_user' => 'id_user']
         ], [
-            'system_user.nameuser(name)',
+            'system_user.name_user(name)',
             'system_user.surname',
             'system_user.photo_url(photourl)',
             'doctor_info.description(description)'
