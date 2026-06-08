@@ -5,7 +5,8 @@
             "MajaPytowska\\ClinicAppointmentSystem\\": "app/"
         },
         "classmap": [
-            "core/"
+            "core/",
+            "app/"
         ]
     },
     "authors": [
