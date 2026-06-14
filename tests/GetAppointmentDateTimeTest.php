@@ -39,7 +39,7 @@ class GetAppointmentDateTimeTest extends TestCase
  
     public function testGetAppointmentDateTime(): void
     {
-        // 1. Poprawny termin - brak błędów, zwrócone obiekty DateTime.
+        // Poprawna data wejściowa to data przyszła, a godziny między 7 a 20, a czas wizyty musi być większy niż 5 min., ale mniejszy niz 4 godziny.
         [$start, $end] = $this->invokeGetAppointmentDateTime('01/01/2099', '10:00', '11:00');
         $this->assertFalse(App::getMessages()->isError());
         $this->assertInstanceOf(DateTime::class, $start);
