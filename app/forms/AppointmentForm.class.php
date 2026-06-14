@@ -15,6 +15,7 @@ class AppointmentForm {
 	public $officeId;
 	public $visitReasonId;
 	public $customVisitReason;
+	public $isAvailable;
 	 
 	public function __construct() {
 	}
@@ -32,5 +33,6 @@ class AppointmentForm {
 		$this->officeId = $appointment_tb['officeId'];
 		$this->visitReasonId = $appointment_tb['visitReasonId'];
 		$this->customVisitReason = $appointment_tb['customVisitReason'];
+		$this->isAvailable = $appointment_tb['is_available'] ?? null;
 	}
 } 

@@ -11,7 +11,7 @@
         <div class="col-6 col-12-xsmall">
             <input type="text" name="endTime" id="endTime" value="{$appointment->endTime}" placeholder="Godzina zakończenia"/> 
         </div>
-        <div class="col-6 col-12-xsmall">
+        <div class="col-6 col-12-xsmall  {if $appointment->isAvailable == false}disabled-container{/if}" >
             <select name="doctorId" id="doctorId">
                 <option style="display: none;" value="">Wybierz lekarza</option>
                 {foreach from=$doctors item=doctor}

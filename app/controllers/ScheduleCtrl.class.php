@@ -162,7 +162,7 @@ class ScheduleCtrl{
 		$this->getURLParams();
 		if($this->selectedAppointment){
 			try{
-				App::getDB()->delete('appointment',['idappointment'=>$this->selectedAppointment]);
+				App::getDB()->delete('appointment',['id_appointment'=>$this->selectedAppointment]);
 			} catch (\PDOException $e){
 				Utils::addErrorMessage("Wystąpił błąd podczas usuwania wizyty.");
 			}

@@ -83,8 +83,7 @@ class EditAppointmentCtrl{
 				'id_doctor(doctorId)',
 				'id_office(officeId)',
 				'id_visit_reason(visitReasonId)',
-				'customvisitreason(customVisitReason)'
-
+				'custom_visit_reason(customVisitReason)',
 			], [
 				'id_appointment' => $this->appointmentId
 			]);
@@ -159,7 +158,7 @@ class EditAppointmentCtrl{
 						'end_datetime' => DatabaseUtils::DB_DateTimeToString($endDateTime),
 						'id_doctor' => $this->appointment->doctorId,
 						'id_office' => $this->appointment->officeId,
-						'is_available' => true
+						'is_available' => $this->appointment->isAvailable
 					], [
 						'id_appointment' => $this->appointmentId
 					]);
@@ -196,6 +195,7 @@ class EditAppointmentCtrl{
 	}
 
 	public function action_saveAppointment(){
+		$this->getURLParams();
 		$this->getFormParams();
 		if($this->validate()){
 			$this->process();

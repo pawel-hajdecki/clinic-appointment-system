@@ -4121,3 +4121,8 @@ input[type="date"]:focus {
 .filter-container .filterContent form{
 	margin: 0px !important;
 }
+
+.disabled-container {
+  pointer-events: none;
+  opacity: 0.5;
+}

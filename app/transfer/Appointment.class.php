@@ -31,7 +31,7 @@ class Appointment{
 		$this->doctor->surname = $appointment_tb['doctorSurname'] ?? null;
 		$this->visitReason = $appointment_tb['visitReason'] ?? null;
 		$this->officeName = $appointment_tb['officeName'] ?? null;
-		$this->isAvailable = $appointment_tb['isavailable'] ?? null;
+		$this->isAvailable = $appointment_tb['is_available'] ?? null;
 		$this->selfReserved = $appointment_tb['selfReserved'] ?? null;
 		$startDatetime = DatabaseUtils::DB_toDateTime($appointment_tb['startDatetime']);
 		$endDatetime = DatabaseUtils::DB_toDateTime($appointment_tb['endDatetime']);
